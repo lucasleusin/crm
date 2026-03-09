@@ -26,6 +26,9 @@ async function main() {
     const adminChildren = routes
       .filter((route) => route.parentId === (adminRoot && adminRoot.id) && !route.hidden)
       .map((route) => route.title);
+    const countriesRoute = routes.find(
+      (route) => route.parentId === (adminRoot && adminRoot.id) && route.title === 'Countries',
+    );
 
     const collections = await app.db.getRepository('dataSourcesCollections').find({
       filter: {
@@ -35,11 +38,45 @@ async function main() {
       sort: ['name'],
     });
 
+    const countriesSchema = countriesRoute?.schemaUid
+      ? await app.db.getCollection('uiSchemas').repository.findOne({ filterByTk: countriesRoute.schemaUid })
+      : null;
+    if (countriesSchema?.load) {
+      await countriesSchema.load({ app });
+    }
+    const countriesSchemaJson = countriesSchema?.toJSON ? countriesSchema.toJSON() : countriesSchema;
+    const countriesSchemaRoot = countriesSchemaJson?.schema || countriesSchemaJson;
+
+    const filterComponents = [];
+    const walk = (node) => {
+      if (!node || typeof node !== 'object') {
+        return;
+      }
+      if (node['x-component'] === 'FilterFormBlockProvider' || node['x-decorator'] === 'FilterFormBlockProvider') {
+        filterComponents.push('FilterFormBlockProvider');
+      }
+      if (node['x-component'] === 'Input.Search') {
+        filterComponents.push('Input.Search');
+      }
+      if (node['x-component'] === 'Select') {
+        filterComponents.push('Select');
+      }
+      if (node.properties) {
+        Object.values(node.properties).forEach(walk);
+      }
+    };
+    walk(countriesSchemaRoot);
+
     console.log(
       JSON.stringify(
         {
           adminRoot: adminRoot ? adminRoot.title : null,
           adminChildren,
+          countriesPage: {
+            schemaUid: countriesRoute?.schemaUid || null,
+            schemaKeys: countriesSchemaJson ? Object.keys(countriesSchemaJson) : [],
+            filterComponents,
+          },
           collections: collections.map((collection) => ({
             name: collection.name,
             title: collection.title || null,

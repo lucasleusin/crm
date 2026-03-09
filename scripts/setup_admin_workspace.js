@@ -12,6 +12,7 @@ const {
 
 const DATA_SOURCE_KEY = 'main';
 const ROOT_MENU_TITLE = 'Admin';
+const CONTINENT_OPTIONS = ['Africa', 'Antarctica', 'Asia', 'Europe', 'North America', 'Oceania', 'South America'];
 
 const PAGE_DEFS = [
   {
@@ -22,6 +23,7 @@ const PAGE_DEFS = [
     columns: ['country_name', 'capital_city', 'continent', 'region'],
     createFields: ['country_name', 'capital_city', 'continent', 'region'],
     editFields: ['country_name', 'capital_city', 'continent', 'region'],
+    countriesFilterForm: true,
   },
   {
     title: 'Org Types',
@@ -300,6 +302,210 @@ function buildPageSchema(collectionName, columns, createFields, editFields, fiel
   return template;
 }
 
+function buildFilterActionBar() {
+  return {
+    _isJSONSchemaObject: true,
+    version: '2.0',
+    type: 'void',
+    'x-initializer': 'filterForm:configureActions',
+    'x-component': 'ActionBar',
+    'x-component-props': {
+      layout: 'one-column',
+      style: {
+        float: 'right',
+      },
+    },
+    properties: {
+      [uid()]: {
+        _isJSONSchemaObject: true,
+        version: '2.0',
+        type: 'void',
+        title: '{{ t("Filter records") }}',
+        'x-action': 'submit',
+        'x-component': 'Action',
+        'x-designer': 'Action.Designer',
+        'x-component-props': {
+          type: 'primary',
+          useProps: '{{ useFilterBlockActionProps }}',
+        },
+      },
+      [uid()]: {
+        _isJSONSchemaObject: true,
+        version: '2.0',
+        type: 'void',
+        title: '{{ t("Reset records") }}',
+        'x-component': 'Action',
+        'x-designer': 'Action.Designer',
+        'x-component-props': {
+          useProps: '{{ useResetBlockActionProps }}',
+        },
+      },
+    },
+  };
+}
+
+function buildFilterFormFieldSchema(collectionName, fieldName, title, component, componentProps, extra = {}) {
+  return {
+    _isJSONSchemaObject: true,
+    version: '2.0',
+    type: 'string',
+    title,
+    required: false,
+    'x-designer': 'FormItem.FilterFormDesigner',
+    'x-toolbar': 'FormItemSchemaToolbar',
+    'x-settings': 'fieldSettings:FilterFormItem',
+    'x-component': component,
+    'x-decorator': 'FormItem',
+    'x-use-decorator-props': 'useFormItemProps',
+    'x-collection-field': `${collectionName}.${fieldName}`,
+    'x-component-props': componentProps,
+    ...extra,
+  };
+}
+
+function buildCountriesFilterFormSchema(collectionName) {
+  const countryNameField = buildFilterFormFieldSchema(
+    collectionName,
+    'country_name',
+    'Country Name',
+    'Input.Search',
+    {
+      allowClear: true,
+      placeholder: 'Search country name',
+    },
+    {
+      'x-filter-operators': [
+        {
+          label: 'contains',
+          value: '$includes',
+          selected: true,
+        },
+      ],
+    },
+  );
+
+  const continentField = buildFilterFormFieldSchema(
+    collectionName,
+    'continent',
+    'Continent',
+    'Select',
+    {
+      allowClear: true,
+      placeholder: 'All continents',
+    },
+    {
+      enum: CONTINENT_OPTIONS.map((value) => ({
+        label: value,
+        value,
+      })),
+      'x-filter-operators': [
+        {
+          label: 'is',
+          value: '$eq',
+          selected: true,
+        },
+      ],
+    },
+  );
+
+  return {
+    _isJSONSchemaObject: true,
+    version: '2.0',
+    type: 'void',
+    'x-component': 'Grid.Row',
+    properties: {
+      [uid()]: {
+        _isJSONSchemaObject: true,
+        version: '2.0',
+        type: 'void',
+        'x-component': 'Grid.Col',
+        properties: {
+          [uid()]: {
+            _isJSONSchemaObject: true,
+            version: '2.0',
+            type: 'void',
+            'x-decorator': 'FilterFormBlockProvider',
+            'x-use-decorator-props': 'useFilterFormBlockDecoratorProps',
+            'x-decorator-props': {
+              dataSource: DATA_SOURCE_KEY,
+              collection: collectionName,
+            },
+            'x-toolbar': 'BlockSchemaToolbar',
+            'x-settings': 'blockSettings:filterForm',
+            'x-component': 'CardItem',
+            'x-filter-targets': [],
+            properties: {
+              [uid()]: {
+                _isJSONSchemaObject: true,
+                version: '2.0',
+                type: 'void',
+                'x-component': 'FormV2',
+                'x-use-component-props': 'useFilterFormBlockProps',
+                properties: {
+                  grid: {
+                    _isJSONSchemaObject: true,
+                    version: '2.0',
+                    type: 'void',
+                    'x-component': 'Grid',
+                    'x-initializer': 'filterForm:configureFields',
+                    properties: {
+                      [uid()]: {
+                        _isJSONSchemaObject: true,
+                        version: '2.0',
+                        type: 'void',
+                        'x-component': 'Grid.Row',
+                        properties: {
+                          [uid()]: {
+                            _isJSONSchemaObject: true,
+                            version: '2.0',
+                            type: 'void',
+                            'x-component': 'Grid.Col',
+                            properties: {
+                              country_name: countryNameField,
+                            },
+                          },
+                          [uid()]: {
+                            _isJSONSchemaObject: true,
+                            version: '2.0',
+                            type: 'void',
+                            'x-component': 'Grid.Col',
+                            properties: {
+                              continent: continentField,
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                  actions: buildFilterActionBar(),
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  };
+}
+
+function addCountriesFilterForm(pageSchema, collectionName) {
+  const pageGrid = findOne(pageSchema, (node) => node['x-component'] === 'Grid' && node['x-initializer'] === 'page:addBlock');
+  if (!pageGrid) {
+    throw new Error(`Failed to locate page grid for ${collectionName}`);
+  }
+
+  const existingEntries = Object.entries(pageGrid.properties || {});
+  const newProperties = {
+    [uid()]: buildCountriesFilterFormSchema(collectionName),
+  };
+
+  for (const [key, value] of existingEntries) {
+    newProperties[key] = value;
+  }
+
+  pageGrid.properties = newProperties;
+}
+
 async function ensureCollectionTitles(app) {
   const repo = app.db.getRepository('dataSourcesCollections');
   for (const pageDef of PAGE_DEFS) {
@@ -430,7 +636,13 @@ async function main() {
       const fieldMap = await getFieldMap(app, pageDef.collection);
       pageSchemas.push({
         ...pageDef,
-        schema: buildPageSchema(pageDef.collection, pageDef.columns, pageDef.createFields, pageDef.editFields, fieldMap),
+        schema: (() => {
+          const schema = buildPageSchema(pageDef.collection, pageDef.columns, pageDef.createFields, pageDef.editFields, fieldMap);
+          if (pageDef.countriesFilterForm) {
+            addCountriesFilterForm(schema, pageDef.collection);
+          }
+          return schema;
+        })(),
       });
     }
 

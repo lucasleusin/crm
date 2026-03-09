@@ -1,0 +1,4 @@
+source_table,target_collection,primary_key,field_name,target_field,target_type,relationship_notes,status
+Companies,companies,id,name,name,string,,todo
+Contacts,contacts,id,company,company,many-to-one,"Contacts -> Companies",todo
+Deals,deals,id,contact,contact,many-to-one,"Deals -> Contacts",todo

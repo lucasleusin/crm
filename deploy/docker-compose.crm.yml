@@ -1,0 +1,30 @@
+services:
+  crm-app:
+    container_name: ${CRM_CONTAINER_NAME:-crm-app}
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file:
+      - ../.env.production
+      - ./crm.env
+    environment:
+      NOCOBASE_RUNNING_IN_DOCKER: "true"
+    expose:
+      - "13000"
+    volumes:
+      - crm_storage:/app/storage
+    networks:
+      - proxy
+      - database
+
+volumes:
+  crm_storage:
+
+networks:
+  proxy:
+    external: true
+    name: ${CRM_PROXY_NETWORK}
+  database:
+    external: true
+    name: ${CRM_DB_NETWORK}

@@ -87,6 +87,7 @@ function buildBelongsToField(spec) {
   return {
     name: spec.fieldName,
     type: 'belongsTo',
+    interface: 'm2o',
     target: spec.targetCollection,
     foreignKey: spec.foreignKey,
     targetKey: 'id',
@@ -103,6 +104,39 @@ function buildBelongsToField(spec) {
     },
   };
 }
+
+const FOREIGN_KEY_SPECS = [
+  {
+    table: 'crm_contacts',
+    column: 'organization_id',
+    constraintName: 'fk_crm_contacts_organization_id',
+    referencedTable: 'crm_organizations',
+  },
+  {
+    table: 'crm_jobs',
+    column: 'contact_id',
+    constraintName: 'fk_crm_jobs_contact_id',
+    referencedTable: 'crm_contacts',
+  },
+  {
+    table: 'crm_jobs',
+    column: 'organization_id',
+    constraintName: 'fk_crm_jobs_organization_id',
+    referencedTable: 'crm_organizations',
+  },
+  {
+    table: 'crm_connections',
+    column: 'contact_id',
+    constraintName: 'fk_crm_connections_contact_id',
+    referencedTable: 'crm_contacts',
+  },
+  {
+    table: 'crm_connections',
+    column: 'organization_id',
+    constraintName: 'fk_crm_connections_organization_id',
+    referencedTable: 'crm_organizations',
+  },
+];
 
 async function bootstrapApp() {
   initEnv();
@@ -355,11 +389,57 @@ function buildPageSchema(collectionName, columns, createFields, editFields, fiel
 async function ensureDataModel(app) {
   const organizations = await getCollectionRecord(app, 'crm_organizations');
   const contacts = await getCollectionRecord(app, 'crm_contacts');
+  const jobs = await getCollectionRecord(app, 'crm_jobs');
+  const connections = await getCollectionRecord(app, 'crm_connections');
 
   await upsertField(app, organizations, buildScalarField('contacts_summary', 'text'));
   await upsertField(
     app,
     contacts,
+    buildBelongsToField({
+      fieldName: 'organization',
+      fieldTitle: 'Organization',
+      targetCollection: 'crm_organizations',
+      targetDisplayField: 'organization_name',
+      foreignKey: 'organization_id',
+    }),
+  );
+  await upsertField(
+    app,
+    jobs,
+    buildBelongsToField({
+      fieldName: 'contact',
+      fieldTitle: 'Contact',
+      targetCollection: 'crm_contacts',
+      targetDisplayField: 'contact_name',
+      foreignKey: 'contact_id',
+    }),
+  );
+  await upsertField(
+    app,
+    jobs,
+    buildBelongsToField({
+      fieldName: 'organization',
+      fieldTitle: 'Organization',
+      targetCollection: 'crm_organizations',
+      targetDisplayField: 'organization_name',
+      foreignKey: 'organization_id',
+    }),
+  );
+  await upsertField(
+    app,
+    connections,
+    buildBelongsToField({
+      fieldName: 'contact',
+      fieldTitle: 'Contact',
+      targetCollection: 'crm_contacts',
+      targetDisplayField: 'contact_name',
+      foreignKey: 'contact_id',
+    }),
+  );
+  await upsertField(
+    app,
+    connections,
     buildBelongsToField({
       fieldName: 'organization',
       fieldTitle: 'Organization',
@@ -483,6 +563,30 @@ async function ensureDataModel(app) {
 
   for (const query of queries) {
     await app.db.sequelize.query(query);
+  }
+
+  const [existingForeignKeys] = await app.db.sequelize.query(`
+    SELECT CONSTRAINT_NAME
+    FROM information_schema.KEY_COLUMN_USAGE
+    WHERE TABLE_SCHEMA = DATABASE()
+      AND REFERENCED_TABLE_NAME IS NOT NULL
+      AND CONSTRAINT_NAME IN (${FOREIGN_KEY_SPECS.map((spec) => `'${spec.constraintName}'`).join(', ')})
+  `);
+  const existingConstraintNames = new Set(existingForeignKeys.map((row) => row.CONSTRAINT_NAME));
+
+  for (const spec of FOREIGN_KEY_SPECS) {
+    if (existingConstraintNames.has(spec.constraintName)) {
+      continue;
+    }
+
+    await app.db.sequelize.query(`
+      ALTER TABLE ${spec.table}
+      ADD CONSTRAINT ${spec.constraintName}
+      FOREIGN KEY (${spec.column})
+      REFERENCES ${spec.referencedTable}(id)
+      ON UPDATE CASCADE
+      ON DELETE SET NULL
+    `);
   }
 }
 

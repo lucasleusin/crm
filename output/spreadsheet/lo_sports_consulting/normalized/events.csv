@@ -1,0 +1,28 @@
+event_key,event_name,year,website,dates,city,status,country_name_raw
+event--0001,Soccerex - Miami,2024,https://soccerex.com/,13-14 November 2024,Miami,Attended,United States
+event--0002,Africa Football Business Summit,2024,https://afbs.footballfoundation.africa,24-25 October 2024,Nairobi,Past,Kenya
+event--0003,World Football Summit - Asia,2024,https://asia.worldfootballsummit.com/,December 2024,TBD,Past,Saudi Arabia
+event--0004,Soccerex - Europe,2024,https://soccerex.com/europe-2024/,30-31 May 2024,Amsterdam,Attended,Netherlands
+event--0005,World Football Summit - Europe,2024,https://europe.worldfootballsummit.com/,18-19 September 2024,Sevilla,Past,Spain
+event--0006,Thinking Football Summit,2024,https://thinkingfootballsummit.com/,12-14 September 2024,Porto,Past,Portugal
+event--0007,Social Football Summit,2024,https://www.socialfootballsummit.com/en/sfs24/,19-20 November 2024,Rome,Past,Italy
+event--0008,Confut Sudamericana,2024,https://www.confutsudamericana.com/,21-23 Agosto 2024,Rio de Janeiro,Past,Brazil
+event--0009,Confut Nordeste,2025,,01-04 December 2025,"Recife, PE",Attended,Brazil
+event--0010,Conafut,2024,https://conafut.com.br/,13-14 Julho 2024,São Paulo,Past,Brazil
+event--0011,ISPO,2024,https://www.ispo.com/en/events,,Multiple,Past,
+event--0012,Saudi Sport Show,2024,https://www.saudisportshow.com/aboutsaudisportshow,10-12 September 2024,Riyadh,Past,Saudi Arabia
+event--0013,MIT Sloan Sports Conference,2025,https://www.sloansportsconference.com/,7-8 March 2024,Boston,Past,United States
+event--0014,Everything in Sports,2025,https://www.everythinginsport.com/,June 2025,Montreal,Past,Canada
+event--0015,Global Sports Convention,2025,https://theglobalsportsconvention.com/,,,Past,Saudi Arabia
+event--0016,Hashtag Sports,2024,https://www.hashtagsports.com/conference,5-6 June 2024,New York,Past,United States
+event--0017,Business of Sport Summit,2024,https://sportsleaders.com.au/,21-22 August 2024,Sydney,Past,Australia
+event--0018,Sport Innovation and Technology,2024,https://irishsportsummit.com/sport-ireland,2 October 2024,Dublin,Past,Ireland
+event--0019,Sport Tech Nation,2024,https://www.sportstechnation.com/,4 December 2024,Munich,Past,Germany
+event--0020,Sports Summit,2024,https://sportssummit.com.br/,7-9 May 2024,São Paulo,Past,Brazil
+event--0021,The New Global Sports Conference,2024,https://newglobalsportconference.com/,24-25 August 2024,Riyadh,Past,Saudi Arabia
+event--0022,International Sports Convention,2025,https://internationalsportsconvention.com/events-calendar/,12 June 2025,New York,Past,United States
+event--0023,Canada Sport Entertainment Expo,2025,https://cseexpo.ca/,June 2025,Calgary,Past,Canada
+event--0024,SBJ Tech Week,2025,https://www.sbjtechweek.com/2025/,4-6 March 2025,New York,Past,United States
+event--0025,COB Expo,2025,https://cobexpo.com.br/,25-29 Sep 2024,Rio de Janeiro,Past,Brazil
+event--0026,Leaders in Sport,2025,https://leadersinsport.com/sport-business/leaders-events/leaders-week-london/,,,Past,
+event--0027,CBF Summit,2025,,26 Jun 2026,São Paulo,Attended,Brazil

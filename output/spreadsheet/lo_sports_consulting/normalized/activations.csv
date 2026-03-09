@@ -1,0 +1,80 @@
+activation_key,activation,categoria,status,local,comentarios,nivel,necessario_para_rodar,custo_estimado,pode_ser_com_parceiro
+activation--caminhoes-itinerantes-com-teloes-transmitindo-jogos-ex-visa,Caminhões itinerantes com telões transmitindo jogos (Ex: Visa),Entretenimento em Geral,Analisar,Itinerante,,,,Médio (R$5.000 - R$10.000),Sim
+activation--casa-nome-do-clube-patrocinador-em-grandes-eventos-ex-mundial,Casa [Nome do Clube/Patrocinador] em grandes eventos (ex: Mundial),Entretenimento em Geral,Analisar,Eventos,,,,Alto (R$10.000 - R$20.000),Obrigatório
+activation--estandes-de-patrocinadores-com-pequenas-interacoes-brindes,Estandes de patrocinadores com pequenas interações/brindes,Experiência com Torcedores,Futuro,Eventos e Jogos,,,,Muito Baixo (< R$3.000),Obrigatório
+activation--ativacoes-e-eventos-tematicos-com-patrocinador,Ativações e Eventos temáticos com patrocinador,Entretenimento em Geral,Analisar,Jogos,,,,Baixo (R$3.000 - R$5.000),Obrigatório
+activation--fan-tokens-para-engajamento-e-votacoes-ex-psg-x-socios-com,Fan Tokens para engajamento e votações (Ex: PSG x Socios.com),Tecnologia,Inviável,Eventos e Jogos,,,,Baixo (R$3.000 - R$5.000),Sim
+activation--acoes-com-identidade-de-bairro-ou-comunidade,Ações com identidade de bairro ou comunidade,Comunidade,Futuro,Itinerante,,,,Baixo (R$3.000 - R$5.000),Sim
+activation--clinicas-e-acampamentos-de-desenvolvimento,Clínicas e acampamentos de desenvolvimento,Comunidade,Analisar,Itinerante,,,,Médio (R$5.000 - R$10.000),Sim
+activation--doacao-de-bolas-para-comunidades-carentes,Doação de bolas para comunidades carentes,Comunidade,Analisar,Itinerante,,,,Baixo (R$3.000 - R$5.000),Sim
+activation--eventos-com-escolas-e-comunidades-locais,Eventos com escolas e comunidades locais,Comunidade,Futuro,Itinerante,,,,Baixo (R$3.000 - R$5.000),Sim
+activation--partidas-beneficentes,Partidas beneficentes,Comunidade,Inviável,Eventos,,,,Alto (R$10.000 - R$20.000),Sim
+activation--ativacao-de-mascote-com-a-torcida,Ativação de Mascote com a torcida,Entretenimento em Geral,Ativa,Eventos e Jogos,,,,Baixíssimo (< R$1.000),Não
+activation--apresentacoes-de-freestylers-e-malabaristas,Apresentações de freestylers e malabaristas,Entretenimento em Geral,Futuro,Eventos e Jogos,,,,Baixíssimo (< R$1.000),Sim
+activation--apresentacoes-musicais-artisticas-locais-djs-bandas-danca,"Apresentações musicais/artísticas locais (DJs, bandas, dança)",Entretenimento em Geral,Analisar,Eventos e Jogos,,,,Muito Baixo (< R$3.000),Sim
+activation--areas-camarote-e-lounges-com-assentos-tematicos,"Áreas, Camarote e lounges com assentos temáticos",Experiência com Torcedores,Analisar,Jogos,,,,Altíssimo (> R$20.000),Sim
+activation--camarote-gramado-experiencia-vip,Camarote Gramado (Experiência VIP),Experiência com Torcedores,Piloto,Jogos,,,,Alto (R$10.000 - R$20.000),Sim
+activation--canhoes-de-papel-picado,Canhões de papel picado,Entretenimento em Geral,Futuro,Jogos,,,,Muito Baixo (< R$3.000),Não
+activation--debates-e-bate-papos-com-idolos-do-passado,Debates e bate-papos com ídolos do passado,Experiência com Torcedores,Analisar,Eventos e Jogos,,,,Baixo (R$3.000 - R$5.000),Não
+activation--mascotinhos-mirins-entrada-com-atletas,Mascotinhos Mirins - Entrada com Atletas,Experiência com Torcedores,Ativa,Jogos,,,,Baixíssimo (< R$1.000),Sim
+activation--espacos-de-bar-drinks-tematicos-degustacao-etc,"Espaços de bar (drinks temáticos, degustação etc.)",Entretenimento em Geral,Inviável,Eventos e Jogos,,,,Alto (R$10.000 - R$20.000),Sim
+activation--exibicao-de-videos-motivacionais-historicos-do-clube-no-telao,Exibição de vídeos motivacionais/históricos do clube no telão,Entretenimento em Geral,Inviável,Jogos,,,,Baixíssimo (< R$1.000),Não
+activation--exposicao-de-camisas-historicas,Exposição de camisas históricas,Experiência com Torcedores,Futuro,Eventos e Jogos,,,,Baixíssimo (< R$1.000),Não
+activation--fan-zones-com-tema-e-marca-do-clube,Fan zones com tema e marca do clube,Entretenimento em Geral,Analisar,Jogos,,,,Médio (R$5.000 - R$10.000),Sim
+activation--homenagens-a-ex-jogadores-ou-personalidades-importantes,Homenagens a ex-jogadores ou personalidades importantes,Entretenimento em Geral,Analisar,Jogos,,,,Baixíssimo (< R$1.000),Não
+activation--lojas-moveis-e-trailers-de-produtos-oficiais,Lojas móveis e trailers de produtos oficiais,Entretenimento em Geral,Futuro,Loja,,,,Alto (R$10.000 - R$20.000),Não
+activation--meet-greet-com-jogadores-sessoes-de-autografos-e-fotos,Meet & Greet com jogadores (sessões de autógrafos e fotos),Experiência com Torcedores,Analisar,Jogos,,,,Baixo (R$3.000 - R$5.000),Sim
+activation--queima-de-fogos-show-de-drones,Queima de fogos / Show de drones,Entretenimento em Geral,Analisar,Jogos,,,,Alto (R$10.000 - R$20.000),Não
+activation--sonorizacao-no-estadio-musicas-locutor-etc,"Sonorização no Estádio (Músicas, Locutor, etc.)",Entretenimento em Geral,Ativa,Jogos,,,,Muito Baixo (< R$3.000),Não
+activation--visitas-de-jogadores-a-camarotes-areas-vip-selecionadas,Visitas de jogadores a camarotes/áreas VIP selecionadas,Experiência com Torcedores,Analisar,Jogos,,,,Muito Baixo (< R$3.000),Sim
+activation--espacos-familiares-kids-zones,Espaços familiares/kids zones,Experiência com Torcedores,Analisar,Jogos,,,,Alto (R$10.000 - R$20.000),Sim
+activation--teloes-gigantes-de-alta-definicao-e-sistema-de-som-imersivo,Telões gigantes de alta definição e sistema de som imersivo,Infraestrutura,Inviável,Jogos,,,,Altíssimo (> R$20.000),Não
+activation--wi-fi-de-alta-qualidade-gratuito-em-todo-o-estadio,Wi-Fi de alta qualidade gratuito em todo o estádio,Infraestrutura,Inviável,Jogos,,,,Altíssimo (> R$20.000),Sim
+activation--desafios-e-distribucao-de-brindes-diversos,Desafios e Distribução de Brindes Diversos,Experiência com Torcedores,Ativa,Eventos e Jogos,,,,Baixo (R$3.000 - R$5.000),Sim
+activation--cabines-de-fotos-simples-com-marca-do-clube,"Cabines de fotos (simples, com marca do clube)",Experiência com Torcedores,Analisar,Eventos e Jogos,,,,Muito Baixo (< R$3.000),Sim
+activation--cartoes-colecionaveis-e-experiencias-fotograficas-para-levar-pra-casa,Cartões colecionáveis e experiências fotográficas para levar pra casa,Experiência com Torcedores,Analisar,Jogos,,,,Baixíssimo (< R$1.000),Sim
+activation--concursos-e-sorteios-para-socios-nas-redes-sociais,Concursos e Sorteios para Sócios nas Redes Sociais,Redes Sociais,Ativa,Eventos e Jogos,,,,Alto (R$10.000 - R$20.000),Sim
+activation--demonstracoes-de-arte-ao-vivo-mural-tenis-customizado-etc,"Demonstrações de arte ao vivo (mural, tênis customizado etc.)",Experiência com Torcedores,Inviável,Eventos,,,,Muito Baixo (< R$3.000),Sim
+activation--estacao-para-criacao-de-cartazes,Estação para criação de cartazes,Experiência com Torcedores,Futuro,Jogos,,,,Baixíssimo (< R$1.000),Sim
+activation--estacao-para-montagem-de-pulseiras-personalizadas,Estação para montagem de pulseiras personalizadas,Experiência com Torcedores,Analisar,Jogos,,,,Baixíssimo (< R$1.000),Sim
+activation--exibicao-de-trofeus-e-fotos-com-eles,Exibição de troféus e fotos com eles,Experiência com Torcedores,Futuro,Eventos e Jogos,,,,Baixíssimo (< R$1.000),Não
+activation--filtros-e-gifs-personalizados-para-redes-sociais,Filtros e GIFs personalizados para redes sociais,Experiência com Torcedores,Analisar,Redes Sociais,,,,Baixíssimo (< R$1.000),Sim
+activation--pintura-facial-e-tatuagens-temporarias,Pintura Facial e Tatuagens Temporárias,Experiência com Torcedores,Ativa,Jogos,,,,Baixíssimo (< R$1.000),Sim
+activation--qr-codes-para-sorteios-camisas-e-produtos,QR Codes para Sorteios (camisas e produtos),Experiência com Torcedores,Piloto,Eventos e Jogos,,,,Baixíssimo (< R$1.000),Sim
+activation--quiosques-de-quiz-interativo,Quiosques de quiz interativo,Experiência com Torcedores,Inviável,Jogos,,,,Baixíssimo (< R$1.000),Sim
+activation--campo-mini-para-clinicas-com-tecnicos-do-clube,Campo mini para clínicas com técnicos do clube,Jogos e Atividades,Analisar,Eventos,,,,Médio (R$5.000 - R$10.000),Sim
+activation--desafio-com-dardos-inflaveis-gigantes,Desafio com dardos infláveis gigantes,Jogos e Atividades,Analisar,Jogos,,,,Médio (R$5.000 - R$10.000),Sim
+activation--desafio-robo-keeper-goleiro-robo,Desafio Robo Keeper (Goleiro Robô),Jogos e Atividades,Inviável,Eventos e Jogos,,,,Alto (R$10.000 - R$20.000),Sim
+activation--intervalo-premiado-serie-de-competicoes,Intervalo Premiado - Série de Competições,Jogos e Atividades,Futuro,Jogos,,,,Muito Baixo (< R$3.000),Sim
+activation--estacoes-de-jogo-com-playstation-5-ou-similar,Estações de jogo com PlayStation 5 (ou similar),Jogos e Atividades,Inviável,Eventos,,,,Baixo (R$3.000 - R$5.000),Sim
+activation--experiencias-em-realidade-virtual-vr,Experiências em Realidade Virtual (VR),Jogos e Atividades,Inviável,Eventos,,,,Alto (R$10.000 - R$20.000),Sim
+activation--footgolf-personalizado,FootGolf personalizado,Jogos e Atividades,Futuro,Jogos,,,,Baixíssimo (< R$1.000),Sim
+activation--futebol-bolha-2x2,Futebol bolha 2x2,Jogos e Atividades,Analisar,Jogos,,,,Baixo (R$3.000 - R$5.000),Sim
+activation--inflaveis-gigantes-em-formato-de-uniforme-mascote,Infláveis gigantes em formato de uniforme/mascote,Jogos e Atividades,Inviável,Eventos e Jogos,,,,Médio (R$5.000 - R$10.000),Sim
+activation--jogos-de-tabuleiro-jenga-gigante-etc,Jogos de tabuleiro (Jenga gigante etc.),Jogos e Atividades,Analisar,Jogos,,,,Muito Baixo (< R$3.000),Sim
+activation--replica-do-banco-de-reservas-para-fotos,Réplica do banco de reservas para fotos,Jogos e Atividades,Analisar,Eventos e Jogos,,,,Alto (R$10.000 - R$20.000),Sim
+activation--torneios-de-teqball-com-marca-do-clube,Torneios de teqball com marca do clube,Jogos e Atividades,Analisar,Eventos,,,,Alto (R$10.000 - R$20.000),Sim
+activation--cobertura-digital-torcida-bastidores-lances-atmosfera,"Cobertura Digital (torcida, bastidores, lances, atmosfera)",Redes Sociais,Ativa,Jogos,,,,Baixíssimo (< R$1.000),Não
+activation--concursos-pre-jogo-ex-acerte-o-placar-e-ganhe-x-com-premios,"Concursos pré-jogo (ex: ""acerte o placar e ganhe X"") com prêmios",Redes Sociais,Piloto,Jogos,,,,Baixíssimo (< R$1.000),Sim
+activation--enquetes-interativas-quem-sera-o-craque-do-jogo,"Enquetes interativas (""Quem será o craque do jogo?"")",Redes Sociais,Piloto,Jogos,,,,Baixíssimo (< R$1.000),Não
+activation--filtros-de-realidade-aumentada-tematicos-para-stories,Filtros de Realidade Aumentada temáticos para stories,Tecnologia,Inviável,Jogos,,,,Médio (R$5.000 - R$10.000),Não
+activation--desafios-tecnicos-com-inteligencia-artificial-ex-precisao-de-chute,Desafios técnicos com inteligência artificial (ex: precisão de chute),Tecnologia,Inviável,Jogos,,,,Alto (R$10.000 - R$20.000),Não
+activation--estacao-de-selecao-de-time-dos-sonhos-fantasy,Estação de seleção de time dos sonhos (fantasy),Tecnologia,Inviável,Jogos,,,,Baixíssimo (< R$1.000),Sim
+activation--filmagens-com-drone-para-conteudo-promocional,Filmagens com drone para conteúdo promocional,Tecnologia,Inviável,Jogos,,,,Médio (R$5.000 - R$10.000),Sim
+activation--gamificacao-da-experiencia-no-estadio-atraves-do-app-desafios-premios,"Gamificação da experiência no estádio através do app (desafios, prêmios)",Tecnologia,Inviável,Jogos,,,,Médio (R$5.000 - R$10.000),Não
+activation--premiacao-por-fidelidade-socio-que-entra-mais-cedo-vai-a-todos-os-jogos,Premiação por Fidelidade (Sócio que entra mais cedo/vai a todos os jogos),Experiência com Torcedores,Piloto,Jogos,,,,Baixíssimo (< R$1.000),Não
+activation--publicidade-digital-em-locais-iconicos-times-square,Publicidade digital em locais icônicos (Times Square),Tecnologia,Futuro,Itinerante,,,,Altíssimo (> R$20.000),Sim
+activation--tecnologia-beacon-para-marketing-de-proximidade-e-ofertas-personalizadas,Tecnologia Beacon para marketing de proximidade e ofertas personalizadas,Tecnologia,Inviável,Jogos,,,,Baixo (R$3.000 - R$5.000),Não
+activation--uso-de-inteligencia-artificial-ia-para-personalizar-ofertas-conteudo,Uso de Inteligência Artificial (IA) para personalizar ofertas/conteúdo,Tecnologia,Inviável,Jogos,,,,Baixo (R$3.000 - R$5.000),Não
+activation--lancamento-de-produtos-tematicos-comemorativos-em-dias-de-jogo,Lançamento de produtos temáticos/comemorativos em dias de jogo,Venda de Produtos,Futuro,Loja,,,,Baixo (R$3.000 - R$5.000),Sim
+activation--loja-e-museu-do-clube,Loja e museu do clube,Venda de Produtos,Futuro,Loja,,,,Altíssimo (> R$20.000),Não
+activation--lojas-pop-up-ou-quiosques-tematicos-no-estadio,Lojas pop-up ou quiosques temáticos no estádio,Venda de Produtos,Futuro,Loja,,,,Médio (R$5.000 - R$10.000),Não
+activation--personalizacao-de-produtos-no-local-camisas-com-nome-numero,Personalização de produtos no local (camisas com nome/número),Venda de Produtos,Futuro,Loja,,,,Muito Baixo (< R$3.000),Não
+activation--transformar-lojas-fisicas-em-arenas-para-watch-parties-com-produtos,"Transformar lojas físicas em ""arenas"" para watch parties com produtos",Venda de Produtos,Futuro,Loja,,,,Médio (R$5.000 - R$10.000),Não
+activation--venda-de-merchandising-com-descontos-promocionais-em-dias-de-jogo,Venda de merchandising com descontos promocionais em dias de jogo,Venda de Produtos,Futuro,Loja,,,,Muito Baixo (< R$3.000),Não
+activation--visitas-aos-bastidores-vestiario-e-aquecimento,Visitas aos Bastidores (Vestiário e Aquecimento),Experiência com Torcedores,Piloto,Eventos e Jogos,,,,Baixo (R$3.000 - R$5.000),Sim
+activation--chutar-a-bola-do-meio-campo-para-o-gol-vazio,Chutar a bola do meio-campo para o gol vazio,Jogos e Atividades,Piloto,Jogos,,,,Baixíssimo (< R$1.000),Sim
+activation--competicoes-de-penaltis,Competições de Pênaltis,Jogos e Atividades,Futuro,Jogos,,,,Baixíssimo (< R$1.000),Sim
+activation--brindes-com-a-esportes-da-sorte-ferroviaria,Brindes com a Esportes da Sorte + Ferroviária,Experiência com Torcedores,Ativa,Jogos,,,,Baixíssimo (< R$1.000),Sim
+activation--ingressos-gratis-para-socio-torcedor,Ingressos Grátis para Sócio Torcedor,Experiência com Torcedores,Ativa,Jogos,,,,Baixo (R$3.000 - R$5.000),Não
+activation--ativacoes-de-patrocinadores-a-definir-individualmente,Ativações de Patrocinadores (a definir individualmente),Experiência com Torcedores,Ativa,Jogos,,,,Baixíssimo (< R$1.000),Sim

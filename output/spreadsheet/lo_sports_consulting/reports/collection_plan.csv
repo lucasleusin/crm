@@ -1,0 +1,14 @@
+collection,source_file,primary_key,notes
+countries,Country-Grid view.csv,country_key,Reference table
+org_types,Org Types-Grid view.csv,org_type_key,Reference table
+sports,Sports-Grid view.csv,sport_key,Reference table
+competitions,Competitions-Grid view.csv,competition_key,Country relation now; organizer stays as text snapshot
+organizations,Organizations-Grid view.csv,organization_key,"Main entity with relation tables for countries, org types, sports"
+contacts,Contacts-Grid view.csv,contact_key,Main entity with relation tables for organizations and countries
+jobs,Jobs-Grid view.csv,job_key,Relations to organizations and contacts
+connections,Connections-Grid view.csv,connection_key,"Relations to organizations, contacts, countries; unresolved rows need review"
+events,Events-Grid view.csv,event_key,Relation to countries
+content_calendar,Content Calendar-Grid view.csv,content_calendar_key,Stable key by Post_ID
+content_published,Content-Published.csv,content_published_key,Many-to-many relation to content_calendar via Post_ID
+assets,Assets-Grid view.csv,asset_key,Standalone lookup-free table
+activations,Activations-Grid view.csv,activation_key,Standalone lookup-free table

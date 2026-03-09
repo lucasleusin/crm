@@ -1,0 +1,124 @@
+sport_key,sport_name,sport_type
+sport--airsoft,Airsoft,Precision and Target
+sport--alpine-skiing,Alpine Skiing,Winter Sport
+sport--american-football,American Football,Team Sport
+sport--archery,Archery,Precision and Target
+sport--athletics,Athletics,Individual Sport
+sport--badminton,Badminton,Racket Sport
+sport--baseball,Baseball,Team Sport
+sport--basketball,Basketball,Team Sport
+sport--beach-soccer,Beach Soccer,Team Sport
+sport--beach-tennis,Beach Tennis,Racket Sport
+sport--beach-volleyball,Beach Volleyball,Team Sport
+sport--biathlon,Biathlon,Winter Sport
+sport--bmx,BMX,Individual Sport
+sport--bmx-freestyle,BMX Freestyle,Adventure and Extreme
+sport--bobsledding,Bobsledding,Winter Sport
+sport--bodyboarding,Bodyboarding,Water Sport
+sport--bodybuilding,Bodybuilding,Individual Sport
+sport--bowling,Bowling,Precision and Target
+sport--boxing,Boxing,Combat Sport
+sport--brazilian-jiu-jitsu,Brazilian Jiu Jitsu,Combat Sport
+sport--canoeing,Canoeing,Water Sport
+sport--canyoning,Canyoning,Adventure and Extreme
+sport--capoeira,Capoeira,Combat Sport
+sport--cricket,Cricket,Team Sport
+sport--cross-country-skiing,Cross Country Skiing,Winter Sport
+sport--curling,Curling,Winter Sport
+sport--darts,Darts,Precision and Target
+sport--diving,Diving,Water Sport
+sport--dodgeball,Dodgeball,Team Sport
+sport--drone-racing,Drone Racing,Racing and Motorsport
+sport--equestrian-dressage,Equestrian / Dressage,Individual Sport
+sport--field-hockey,Field Hockey,Team Sport
+sport--figure-skating,Figure Skating,Winter Sport
+sport--floorball,Floorball,Team Sport
+sport--football,Football,Team Sport
+sport--footvolley,Footvolley,Team Sport
+sport--formula-one,Formula One,Racing and Motorsport
+sport--freediving,Freediving,Water Sport
+sport--freestyle-skiing,Freestyle Skiing,Winter Sport
+sport--futsal,Futsal,Team Sport
+sport--gaelic-football,Gaelic Football,Team Sport
+sport--golf,Golf,Individual Sport
+sport--gymnastics,Gymnastics,Individual Sport
+sport--handball,Handball,Team Sport
+sport--horse-racing,Horse Racing,Racing and Motorsport
+sport--hurling,Hurling,Team Sport
+sport--ice-boating,Ice Boating,Winter Sport
+sport--ice-climbing,Ice Climbing,Winter Sport
+sport--ice-hockey,Ice Hockey,Team Sport
+sport--inline-skating,Inline Skating,Individual Sport
+sport--jet-ski-racing,Jet Ski Racing,Racing and Motorsport
+sport--judo,Judo,Combat Sport
+sport--kabaddi,Kabaddi,Team Sport
+sport--karate,Karate,Combat Sport
+sport--kart-racing,Kart Racing,Racing and Motorsport
+sport--kayaking,Kayaking,Water Sport
+sport--kickboxing,Kickboxing,Combat Sport
+sport--kitesurfing,Kitesurfing,Water Sport
+sport--kudo,Kudo,Combat Sport
+sport--lacrosse,Lacrosse,Team Sport
+sport--luge,Luge,Winter Sport
+sport--mixed-martial-arts,Mixed Martial Arts,Combat Sport
+sport--motogp,MotoGP,Racing and Motorsport
+sport--mountain-biking,Mountain Biking,Individual Sport
+sport--muay-thai,Muay Thai,Combat Sport
+sport--multiple,Multiple,Multiple
+sport--nascar,NASCAR,Racing and Motorsport
+sport--netball,Netball,Team Sport
+sport--orienteering,Orienteering,Individual Sport
+sport--paddleboarding,Paddleboarding,Individual Sport
+sport--padel,Padel,Racket Sport
+sport--paintball,Paintball,Precision and Target
+sport--paragliding,Paragliding,Adventure and Extreme
+sport--parkour,Parkour,Adventure and Extreme
+sport--petanque-bocce,Petanque (Bocce),Precision and Target
+sport--pistol-shooting,Pistol Shooting,Precision and Target
+sport--pool,Pool,Precision and Target
+sport--powerlifting,Powerlifting,Individual Sport
+sport--rally-racing,Rally Racing,Racing and Motorsport
+sport--rifle-shooting,Rifle Shooting,Precision and Target
+sport--road-cycling,Road Cycling,Individual Sport
+sport--rock-climbing,Rock Climbing,Adventure and Extreme
+sport--rowing,Rowing,Water Sport
+sport--rugby,Rugby,Team Sport
+sport--running-jogging,Running / Jogging,Individual Sport
+sport--sailing,Sailing,Water Sport
+sport--sambo,Sambo,Combat Sport
+sport--savate,Savate,Combat Sport
+sport--sepak-takraw,Sepak Takraw,Team Sport
+sport--shotgun-shooting,Shotgun Shooting,Precision and Target
+sport--skateboarding,Skateboarding,Adventure and Extreme
+sport--skeleton,Skeleton,Winter Sport
+sport--slacklining,Slacklining,Adventure and Extreme
+sport--snooker,Snooker,Precision and Target
+sport--snowboarding,Snowboarding,Winter Sport
+sport--snowshoeing,Snowshoeing,Winter Sport
+sport--softball,Softball,Team Sport
+sport--speed-skating,Speed Skating,Winter Sport
+sport--speed-walking,Speed Walking,Individual Sport
+sport--squash,Squash,Racket Sport
+sport--stand-up-paddle,Stand-Up Paddle,Water Sport
+sport--sumo,Sumo,Combat Sport
+sport--surfing,Surfing,Water Sport
+sport--swimming,Swimming,Individual Sport
+sport--table-tennis,Table Tennis,Racket Sport
+sport--taekwondo,Taekwondo,Combat Sport
+sport--tennis,Tennis,Racket Sport
+sport--track-cycling,Track Cycling,Individual Sport
+sport--triathlon,Triathlon,Individual Sport
+sport--ultimate-frisbee,Ultimate Frisbee,Team Sport
+sport--volleyball,Volleyball,Team Sport
+sport--water-polo,Water Polo,Team Sport
+sport--water-skiing,Water Skiing,Water Sport
+sport--windsurfing,Windsurfing,Water Sport
+sport--wingsuit-flying,Wingsuit Flying,Adventure and Extreme
+sport--wrestling,Wrestling,Combat Sport
+sport--wushu,Wushu,Combat Sport
+sport--zorbing,Zorbing,Adventure and Extreme
+sport--esports,eSports,eSports
+sport--fencing,Fencing,Combat Sport
+sport--freestyle,Freestyle,Individual Sport
+sport--canadian-football,Canadian Football,Team Sport
+sport--motorsport,Motorsport,Racing and Motorsport

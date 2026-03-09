@@ -29,3 +29,7 @@ tools/node20/
 deploy/crm.env
 data/airtable/raw/*
 !data/airtable/raw/.gitkeep
+crm-deploy.tgz
+stdout
+__pycache__/
+scripts/__pycache__/

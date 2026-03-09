@@ -1,0 +1,59 @@
+org_type_key,org_type_name,org_group
+org-type--football-association,Football Association,Sports Organizations
+org-type--football-club,Football Club,Sports Organizations
+org-type--football-competition,Football Competition,Sports Organizations
+org-type--football-confederation,Football Confederation,Sports Organizations
+org-type--football-league,Football League,Sports Organizations
+org-type--international-federations,International Federations,Sports Organizations
+org-type--ioc-noc,IOC / NOC,Sports Organizations
+org-type--mco-multi-club-ownership,MCO - Multi Club Ownership,Sports Organizations
+org-type--national-sport-federation,National Sport Federation,Sports Organizations
+org-type--regional-football-federation,Regional Football Federation,Sports Organizations
+org-type--sport-academy-and-complex,Sport Academy and Complex,Sports Organizations
+org-type--sport-clubs,Sport Clubs,Sports Organizations
+org-type--sport-competition,Sport Competition,Sports Organizations
+org-type--sport-competition-organizer,Sport Competition Organizer,Sports Organizations
+org-type--sports-technology,Sports Technology,Technology
+org-type--sports-technology-event-management,Sports Technology (Event Management),Technology
+org-type--sports-technology-fan-management,Sports Technology (Fan Management),Technology
+org-type--sports-technology-infrastructure,Sports Technology (Infrastructure),Technology
+org-type--sports-technology-performance-management,Sports Technology (Performance Management),Technology
+org-type--sports-technology-roaster-club-management,Sports Technology (Roaster / Club Management),Technology
+org-type--sports-technology-social-talent-discovery-platform,Sports Technology (Social / Talent Discovery Platform),Technology
+org-type--sports-technology-tracking-and-video,Sports Technology (Tracking and Video),Technology
+org-type--sports-website-news-stats,Sports Website (News / Stats),Technology
+org-type--technology-non-sport,Technology (Non-Sport),Technology
+org-type--telecommunications-internet,Telecommunications / Internet,Technology
+org-type--video-broadcasting-technology,Video / Broadcasting Technology,Technology
+org-type--betting,Betting,Media and Entertainment
+org-type--entertainment,Entertainment,Media and Entertainment
+org-type--gaming,Gaming,Media and Entertainment
+org-type--media-broadcast,Media / Broadcast,Media and Entertainment
+org-type--education,Education,Health and Education
+org-type--foundation,Foundation,Health and Education
+org-type--health-services,Health Services,Health and Education
+org-type--pharmaceutical-supplement,Pharmaceutical / Supplement,Health and Education
+org-type--airline-company,Airline Company,Commercial and Retail
+org-type--bar-restaurant,Bar / Restaurant,Commercial and Retail
+org-type--car-manufacturer-rental,Car Manufacturer / Rental,Commercial and Retail
+org-type--construction-real-estate,Construction / Real Estate,Commercial and Retail
+org-type--food-and-beverage,Food and Beverage,Commercial and Retail
+org-type--manufacturing-industrial,Manufacturing / Industrial,Commercial and Retail
+org-type--sports-goods-retail,Sports Goods / Retail,Commercial and Retail
+org-type--consulting-services,Consulting Services,Consulting and Services
+org-type--marketing-agency,Marketing Agency,Consulting and Services
+org-type--sport-infrastructure-turf-management,Sport Infrastructure / Turf Management,Consulting and Services
+org-type--sport-lawyer,Sport Lawyer,Consulting and Services
+org-type--talent-agency-agents,Talent Agency / Agents,Consulting and Services
+org-type--unions-players-clubs-leagues-and-forums,"Unions (Players, Clubs, Leagues) and Forums",Consulting and Services
+org-type--event-producer,Event Producer,Event and Operations
+org-type--facilities-stadium-management,Facilities / Stadium Management,Event and Operations
+org-type--job-fair-networking,Job Fair / Networking,Event and Operations
+org-type--government-public-institutions,Government / Public Institutions,Public and Government
+org-type--energy-mining-oil-gas-agro,Energy / Mining / Oil & Gas / Agro,Finance and Logistics
+org-type--insurance-financial-services-corporate,"Insurance, Financial Services, Corporate",Finance and Logistics
+org-type--logistics-transport,Logistics / Transport,Finance and Logistics
+org-type--sports-investment,Sports Investment,Finance and Logistics
+org-type--sport-analytics,Sport Analytics,Performance and Analytics
+org-type--sport-training,Sport Training,Performance and Analytics
+org-type--not-found,Not Found,Uncategorized

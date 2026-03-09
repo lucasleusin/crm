@@ -1,0 +1,255 @@
+country_key,country_name,capital_city,continent,region
+country--afghanistan,Afghanistan,Kabul,Asia,Middle East
+country--albania,Albania,Tirana,Europe,Europe
+country--algeria,Algeria,Algiers,Africa,Africa
+country--american-samoa,American Samoa,Apia,Oceania,Oceania
+country--andorra,Andorra,Andorra la Vella,Europe,Europe
+country--angola,Angola,Luanda,Africa,Africa
+country--anguilla,Anguilla,,North America,Central America
+country--antarctica,Antarctica,,Antarctica,Antarctica
+country--antigua-and-barbuda,Antigua and Barbuda,,North America,Central America
+country--argentina,Argentina,Buenos Aires,South America,South America
+country--armenia,Armenia,Yerevan,Asia,Asia
+country--aruba,Aruba,,North America,Central America
+country--australia,Australia,Canberra,Oceania,Oceania
+country--austria,Austria,Vienna,Europe,Europe
+country--azerbaijan,Azerbaijan,Baku,Asia,Asia
+country--bahamas,Bahamas,,North America,Central America
+country--bahrain,Bahrain,Manama,Asia,Middle East
+country--bangladesh,Bangladesh,Dhaka,Asia,Asia
+country--barbados,Barbados,Bridgetown,North America,Caribbean
+country--belarus,Belarus,Minsk,Europe,Europe
+country--belgium,Belgium,Brussels,Europe,Europe
+country--belize,Belize,Belmopan,North America,Central America
+country--benin,Benin,Porto-Novo,Africa,Africa
+country--bermuda,Bermuda,Hamilton,North America,Caribbean
+country--bhutan,Bhutan,Thimphu,Asia,Asia
+country--bolivia,Bolivia,La Paz,South America,South America
+country--bosnia-and-herzegovina,Bosnia and Herzegovina,,Europe,Europe
+country--botswana,Botswana,Gaborone,Africa,Africa
+country--bouvet-island,Bouvet Island,,Antarctica,Antarctica
+country--brazil,Brazil,Brasilia,South America,South America
+country--british-indian-ocean-territory,British Indian Ocean Territory,,Asia,Unknown
+country--british-virgin-islands,British Virgin Islands,,North America,Central America
+country--brunei,Brunei,Bandar Seri Begawan,Asia,Asia
+country--bulgaria,Bulgaria,Sofia,Europe,Europe
+country--burkina-faso,Burkina Faso,Ouagadougou,Africa,Africa
+country--burundi,Burundi,Bujumbura,Africa,Africa
+country--cambodia,Cambodia,Phnom Penh,Asia,Asia
+country--cameroon,Cameroon,Yaounde,Africa,Africa
+country--canada,Canada,Ottawa,North America,North America
+country--cape-verde,Cape Verde,Praia,Africa,Africa
+country--cayman-islands,Cayman Islands,,North America,Central America
+country--central-african-republic,Central African Republic,Bangui,Africa,Africa
+country--chad,Chad,N'Djamena,Africa,Africa
+country--chile,Chile,Santiago,South America,South America
+country--china,China,Beijing,Asia,Asia
+country--christmas-island,Christmas Island,,Oceania,Oceania
+country--cocos-keeling-islands,Cocos [Keeling] Islands,,Oceania,Oceania
+country--colombia,Colombia,Bogota,South America,South America
+country--comoros,Comoros,Moroni,Africa,Africa
+country--congo-drc,Congo [DRC],,Africa,Africa
+country--congo-republic,Congo [Republic],,Africa,Africa
+country--cook-islands,Cook Islands,,Oceania,Oceania
+country--costa-rica,Costa Rica,San Jose,North America,Central America
+country--cote-d-ivoire,Cote d'Ivoire,Yamoussoukro,,Africa
+country--cote-d-ivoire,Côte d'Ivoire,,Africa,Africa
+country--croatia,Croatia,Zagreb,Europe,Europe
+country--cuba,Cuba,Havana,North America,Caribbean
+country--curacao,Curaçao,Willemstad,,Caribbean
+country--cyprus,Cyprus,Nicosia,Europe,Europe
+country--czech-republic,Czech Republic,Prague,Europe,Europe
+country--denmark,Denmark,Copenhagen,Europe,Europe
+country--djibouti,Djibouti,Djibouti,Africa,Africa
+country--dominica,Dominica,Roseau,North America,Caribbean
+country--dominican-republic,Dominican Republic,Santo Domingo,North America,Caribbean
+country--ecuador,Ecuador,Quito,South America,South America
+country--egypt,Egypt,Cairo,Africa,Africa
+country--el-salvador,El Salvador,San Salvador,North America,Central America
+country--england,England,London,Europe,Europe
+country--equatorial-guinea,Equatorial Guinea,Malabo,Africa,Africa
+country--eritrea,Eritrea,Asmara,Africa,Africa
+country--estonia,Estonia,Tallinn,Europe,Europe
+country--ethiopia,Ethiopia,Addis Ababa,Africa,Africa
+country--falkland-islands-islas-malvinas,Falkland Islands [Islas Malvinas],,South America,South America
+country--faroe-islands,Faroe Islands,,Europe,Europe
+country--fiji,Fiji,Suva,Oceania,Oceania
+country--finland,Finland,Helsinki,Europe,Europe
+country--france,France,Paris,Europe,Europe
+country--french-guiana,French Guiana,,South America,South America
+country--french-polynesia,French Polynesia,,Oceania,Unknown
+country--french-southern-territories,French Southern Territories,,Antarctica,Antarctica
+country--gabon,Gabon,Libreville,Africa,Africa
+country--gambia,Gambia,,Africa,Africa
+country--gambia-the,"Gambia, The",Banjul,,Africa
+country--gaza-strip,Gaza Strip,,Asia,Asia
+country--georgia,Georgia,Tbilisi,Europe,Asia
+country--germany,Germany,Berlin,Europe,Europe
+country--ghana,Ghana,Accra,Africa,Africa
+country--gibraltar,Gibraltar,,Europe,Europe
+country--greece,Greece,Athens,Europe,Europe
+country--greenland,Greenland,,North America,North America
+country--grenada,Grenada,St George's,North America,Caribbean
+country--guadeloupe,Guadeloupe,,North America,Central America
+country--guam,Guam,,Oceania,North America
+country--guatemala,Guatemala,Guatemala City,North America,Central America
+country--guernsey,Guernsey,,Europe,Europe
+country--guinea,Guinea,Conakry,Africa,Africa
+country--guinea-bissau,Guinea-Bissau,Bissau,Africa,Africa
+country--guyana,Guyana,Georgetown,South America,South America
+country--haiti,Haiti,Port-au-Prince,North America,Caribbean
+country--heard-island-and-mcdonald-islands,Heard Island and McDonald Islands,,Antarctica,Oceania
+country--honduras,Honduras,Tegucigalpa,North America,Central America
+country--hong-kong,Hong Kong,,Asia,Asia
+country--hungary,Hungary,Budapest,Europe,Europe
+country--iceland,Iceland,Reykjavik,Europe,Europe
+country--india,India,New Delhi,Asia,Asia
+country--indonesia,Indonesia,Jakarta,Asia,Asia
+country--iran,Iran,Tehran,Asia,Middle East
+country--iraq,Iraq,Baghdad,Asia,Middle East
+country--ireland,Ireland,Dublin,Europe,Europe
+country--isle-of-man,Isle of Man,,Europe,Europe
+country--israel,Israel,Jerusalem,Asia,Middle East
+country--italy,Italy,Rome,Europe,Europe
+country--jamaica,Jamaica,Kingston,North America,Caribbean
+country--japan,Japan,Tokyo,Asia,Asia
+country--jersey,Jersey,,Europe,Europe
+country--jordan,Jordan,Amman,Asia,Middle East
+country--kazakhstan,Kazakhstan,Astana,Asia,Asia
+country--kenya,Kenya,Nairobi,Africa,Africa
+country--kiribati,Kiribati,Tarawa,Oceania,Oceania
+country--kosovo,Kosovo,Pristina,Europe,Europe
+country--kuwait,Kuwait,Kuwait City,Asia,Middle East
+country--kyrgyzstan,Kyrgyzstan,Bishkek,Asia,Asia
+country--laos,Laos,Vientiane,Asia,Asia
+country--latvia,Latvia,Riga,Europe,Europe
+country--lebanon,Lebanon,Beirut,Asia,Middle East
+country--lesotho,Lesotho,Maseru,Africa,Africa
+country--liberia,Liberia,Monrovia,Africa,Africa
+country--libya,Libya,Tripoli,Africa,Africa
+country--liechtenstein,Liechtenstein,Vaduz,Europe,Europe
+country--lithuania,Lithuania,Vilnius,Europe,Europe
+country--luxembourg,Luxembourg,Luxembourg City,Europe,Europe
+country--macau,Macau,,Asia,Asia
+country--macedonia,Macedonia,,Europe,Europe
+country--madagascar,Madagascar,Antananarivo,Africa,Africa
+country--malawi,Malawi,Lilongwe,Africa,Africa
+country--malaysia,Malaysia,Kuala Lumpur,Asia,Asia
+country--maldives,Maldives,Male,Asia,Asia
+country--mali,Mali,Bamako,Africa,Africa
+country--malta,Malta,Valletta,Europe,Europe
+country--marshall-islands,Marshall Islands,Majuro,Oceania,Oceania
+country--martinique,Martinique,,North America,Unknown
+country--mauritania,Mauritania,Nouakchott,Africa,Africa
+country--mauritius,Mauritius,Port Louis,Africa,Africa
+country--mayotte,Mayotte,,Africa,Africa
+country--mexico,Mexico,Mexico City,North America,North America
+country--micronesia,Micronesia,,Oceania,Oceania
+country--moldova,Moldova,Chisinau,Europe,Europe
+country--monaco,Monaco,Monaco,Europe,Europe
+country--mongolia,Mongolia,Ulaanbaatar,Asia,Asia
+country--montenegro,Montenegro,Podgorica,Europe,Europe
+country--montserrat,Montserrat,,North America,Central America
+country--morocco,Morocco,Rabat,Africa,Africa
+country--mozambique,Mozambique,Maputo,Africa,Africa
+country--myanmar-burma,Myanmar [Burma],,Asia,Asia
+country--namibia,Namibia,Windhoek,Africa,Africa
+country--nauru,Nauru,Yaren,Oceania,Oceania
+country--nepal,Nepal,Kathmandu,Asia,Asia
+country--netherlands,Netherlands,Amsterdam,Europe,Europe
+country--netherlands-antilles,Netherlands Antilles,,North America,Caribbean
+country--new-caledonia,New Caledonia,,Oceania,Oceania
+country--new-zealand,New Zealand,Wellington,Oceania,Oceania
+country--nicaragua,Nicaragua,Managua,North America,Central America
+country--niger,Niger,Niamey,Africa,Africa
+country--nigeria,Nigeria,Abuja,Africa,Africa
+country--niue,Niue,,Oceania,Oceania
+country--norfolk-island,Norfolk Island,,Oceania,Oceania
+country--north-korea,North Korea,Pyongyang,Asia,Asia
+country--northern-ireland,Northern Ireland,Belfast,,Europe
+country--northern-mariana-islands,Northern Mariana Islands,,Oceania,North America
+country--norway,Norway,Oslo,Europe,Europe
+country--oman,Oman,Muscat,Asia,Middle East
+country--pakistan,Pakistan,Islamabad,Asia,Asia
+country--palau,Palau,Ngerulmud,Oceania,Oceania
+country--palestinian-territories,Palestinian Territories,,Asia,Asia
+country--panama,Panama,Panama City,North America,Central America
+country--papua-new-guinea,Papua New Guinea,Port Moresby,Oceania,Oceania
+country--paraguay,Paraguay,Asuncion,South America,South America
+country--peru,Peru,Lima,South America,South America
+country--philippines,Philippines,Manila,Asia,Asia
+country--pitcairn-islands,Pitcairn Islands,,Oceania,Oceania
+country--poland,Poland,Warsaw,Europe,Europe
+country--portugal,Portugal,Lisbon,Europe,Europe
+country--puerto-rico,Puerto Rico,San Juan,North America,Caribbean
+country--qatar,Qatar,Doha,Asia,Middle East
+country--reunion,Réunion,,Africa,Africa
+country--romania,Romania,Bucharest,Europe,Europe
+country--russia,Russia,Moscow,Europe,Europe
+country--rwanda,Rwanda,Kigali,Africa,Africa
+country--saint-helena,Saint Helena,,Africa,Africa
+country--saint-kitts-and-nevis,Saint Kitts and Nevis,,North America,Central America
+country--saint-lucia,Saint Lucia,Castries,North America,Caribbean
+country--saint-pierre-and-miquelon,Saint Pierre and Miquelon,,North America,Central America
+country--saint-vincent-and-the-grenadines,Saint Vincent and the Grenadines,Kingstown,North America,Caribbean
+country--samoa,Samoa,Apia,Oceania,Oceania
+country--san-marino,San Marino,San Marino,Europe,Europe
+country--sao-tome-and-principe,São Tomé and Príncipe,,Africa,Africa
+country--saudi-arabia,Saudi Arabia,Riyadh,Asia,Asia
+country--scotland,Scotland,Edinburgh,Europe,Europe
+country--senegal,Senegal,Dakar,Africa,Africa
+country--serbia,Serbia,Belgrade,Europe,Europe
+country--seychelles,Seychelles,Victoria,Africa,Africa
+country--sierra-leone,Sierra Leone,Freetown,Africa,Africa
+country--singapore,Singapore,Singapore,Asia,Asia
+country--slovakia,Slovakia,Bratislava,Europe,Europe
+country--slovenia,Slovenia,Ljubljana,Europe,Europe
+country--solomon-islands,Solomon Islands,Honiara,Oceania,Oceania
+country--somalia,Somalia,Mogadishu,Africa,Africa
+country--south-africa,South Africa,"Pretoria, Cape Town, Bloemfontein",Africa,Africa
+country--south-georgia-and-the-south-sandwich-islands,South Georgia and the South Sandwich Islands,,Antarctica,Antarctica
+country--south-korea,South Korea,Seoul,Asia,Asia
+country--spain,Spain,Madrid,Europe,Europe
+country--sri-lanka,Sri Lanka,"Colombo, Sri Jayawardenepura Kotte",Asia,Asia
+country--sudan,Sudan,Khartoum,Africa,Africa
+country--suriname,Suriname,Paramaribo,South America,South America
+country--svalbard-and-jan-mayen,Svalbard and Jan Mayen,,Europe,Europe
+country--swaziland,Swaziland,,Africa,Africa
+country--sweden,Sweden,Stockholm,Europe,Europe
+country--switzerland,Switzerland,Bern,Europe,Europe
+country--syria,Syria,Damascus,Asia,Middle East
+country--tahiti,Tahiti,Papeʻete,,Oceania
+country--taiwan,Taiwan,Taipei,Asia,Asia
+country--tajikistan,Tajikistan,Dushanbe,Asia,Asia
+country--tanzania,Tanzania,Dodoma,Africa,Africa
+country--thailand,Thailand,Bangkok,Asia,Asia
+country--timor-leste,Timor-Leste,,Asia,Unknown
+country--togo,Togo,Lome,Africa,Africa
+country--tokelau,Tokelau,,Oceania,Oceania
+country--tonga,Tonga,Nuku'alofa,Oceania,Oceania
+country--trinidad-tobago,Trinidad & Tobago,Port of Spain,,Caribbean
+country--trinidad-and-tobago,Trinidad and Tobago,,North America,Central America
+country--tunisia,Tunisia,Tunis,Africa,Africa
+country--turkey,Turkey,Ankara,Europe,Europe
+country--turkmenistan,Turkmenistan,Ashgabat,Asia,Asia
+country--turks-and-caicos-islands,Turks and Caicos Islands,,North America,Central America
+country--tuvalu,Tuvalu,Funafuti,Oceania,Oceania
+country--u-s-minor-outlying-islands,U.S. Minor Outlying Islands,,Oceania,North America
+country--u-s-virgin-islands,U.S. Virgin Islands,,North America,North America
+country--uganda,Uganda,Kampala,Africa,Africa
+country--ukraine,Ukraine,Kiev,Europe,Europe
+country--united-arab-emirates,United Arab Emirates,Abu Dhabi,Asia,Middle East
+country--united-kingdom,United Kingdom,,Europe,Europe
+country--united-states,United States,Washington DC,North America,North America
+country--uruguay,Uruguay,Montevideo,South America,South America
+country--uzbekistan,Uzbekistan,Tashkent,Asia,Asia
+country--vanuatu,Vanuatu,Port Vila,Oceania,Oceania
+country--vatican-city,Vatican City,Vatican City,Europe,Europe
+country--venezuela,Venezuela,Caracas,South America,South America
+country--vietnam,Vietnam,Hanoi,Asia,Asia
+country--wales,Wales,Cardiff,Europe,Europe
+country--wallis-and-futuna,Wallis and Futuna,,Oceania,Oceania
+country--western-sahara,Western Sahara,,Africa,Africa
+country--yemen,Yemen,Sanaa,Asia,Middle East
+country--zambia,Zambia,Lusaka,Africa,Africa
+country--zimbabwe,Zimbabwe,Harare,Africa,Africa

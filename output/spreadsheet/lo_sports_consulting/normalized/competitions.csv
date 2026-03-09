@@ -1,0 +1,38 @@
+competition_key,competition_name,competition_period,competition_level,organizer_text,country_name_raw
+competition--la-liga,La Liga,Yearly,National,La Liga,Spain
+competition--english-premier-league-epl,English Premier League (EPL),Yearly,National,English Premier League (EPL),England
+competition--fifa-club-world-cup-2025,FIFA Club World Cup 2025,2025,International,FIFA (Fédération Internationale de Football Association),United States
+competition--campeonato-brasileiro-serie-a,Campeonato Brasileiro - Serie A,Yearly,National,"CBF - Confederação Brasileira de Futebol,Esporte Clube Bahia,Botafogo de Futebol e Regatas,Clube Atlético Mineiro,Sport Club Corinthians Paulista,CR Flamengo,Cruzeiro EC,Fluminense Football Club,Fortaleza Esporte Clube,Grêmio Foot-Ball Porto Alegrense,Juventude,Red Bull Bragantino,São Paulo Futebol Clube,SE Palmeiras,Sport Club Internacional,Vasco da Gama SAF,Mirassol Futebol Clube,Ceará Sporting Club,Santos FC,EC Vitória,Sport Club do Recife",Brazil
+competition--liga-mx,Liga MX,Yearly,National,Liga MX,Mexico
+competition--florida-cup-fc-series-2025,Florida Cup (FC Series) 2025,2025,Private,,United States
+competition--saudi-pro-league,Saudi Pro League,Yearly,National,SAFF - Saudi Arabian Football Federation,Saudi Arabia
+competition--eredivisie,Eredivisie,Yearly,National,,Netherlands
+competition--primeira-liga,Primeira Liga,Yearly,National,,Portugal
+competition--ligue-1,Ligue 1,Yearly,National,,France
+competition--scottish-premiership,Scottish Premiership,Yearly,National,,Scotland
+competition--major-league-soccer,Major League Soccer,Yearly,National,Major League Soccer (MLS),United States
+competition--bundesliga,Bundesliga,Yearly,National,Bundesliga / DFL Deutsche Fußball,Germany
+competition--serie-a,Serie A,Yearly,National,Serie A,Italy
+competition--j1-league,J1 League,Yearly,National,JFA - Japan Football Association,Japan
+competition--austrian-bundesliga,Austrian Bundesliga,Yearly,National,,Austria
+competition--new-zealand-national-league,New Zealand National League,Yearly,National,,New Zealand
+competition--uae-pro-league,UAE Pro League,Yearly,National,,United Arab Emirates
+competition--k-league-1,K League 1,Yearly,National,,South Korea
+competition--egyptian-premier-league,Egyptian Premier League,Yearly,National,EFA - Egyptian Football Association,Egypt
+competition--botola-pro,Botola Pro,Yearly,National,,Morocco
+competition--ligue-professionnelle-1,Ligue Professionnelle 1,Yearly,National,,Algeria
+competition--south-african-premier-division,South African Premier Division,Yearly,National,,South Africa
+competition--primera-division,Primera División,Yearly,National,,Argentina
+competition--efl-championship,EFL Championship,Yearly,National,English Football League (EFL),England
+competition--national-women-s-soccer-league,National Women's Soccer League,Yearly,National,,United States
+competition--efl-league-one,EFL League One,Yearly,National,English Football League (EFL),England
+competition--super-league-greece,Super League Greece,Yearly,National,,Greece
+competition--fifa-world-cup-2026,FIFA World Cup 2026,Every 4 years,International,FIFA (Fédération Internationale de Football Association),Switzerland
+competition--2-bundesliga,2. Bundesliga,Yearly,National,Bundesliga / DFL Deutsche Fußball,Germany
+competition--usl-league-one,USL League One,Yearly,National,United Soccer League (USL),United States
+competition--usl-championship,USL Championship,Yearly,National,United Soccer League (USL),United States
+competition--a-league-men,A-League Men,Yealy,National,Football Australia,Australia
+competition--campeonato-brasileiro-serie-b,Campeonato Brasileiro - Serie B,Yearly,National,"CBF - Confederação Brasileira de Futebol,América Futebol Clube,Avaí Futebol Clube,Club Athletico Paranaense,CRB,Ferroviaria SAF,Goiás Esporte Clube,Paysandu Sport Club,Coritiba Foot Ball Club,Associação Chapecoense de Futebol,Clube do Remo,Grêmio Novorizontino,Criciúma Esporte Clube,Cuiabá Esporte Clube,Atlético Clube Goianiense,Vila Nova Futebol Clube,Operário Ferroviário Esporte Clube,Athletic Club SAF,Botafogo Futebol Clube (SP),Volta Redonda FC,Amazonas FC",Brazil
+competition--campeonato-brasileiro-serie-c,Campeonato Brasileiro - Serie C,Yearly,National,"CBF - Confederação Brasileira de Futebol,Ypiranga de Erechim,Associação Atlética Ponte Preta,Londrina Esporte Clube,São Bernardo Futebol Clube,Clube Náutico Capibaribe",Brazil
+competition--campeonato-brasileiro-serie-d,Campeonato Brasileiro - Serie D,Yearly,National,"CBF - Confederação Brasileira de Futebol,Guarani FC,EC XV de Piracicaba,Joinville Esporte Clube",Brazil
+competition--copa-do-brasil,Copa do Brasil,Yearly,National,CBF - Confederação Brasileira de Futebol,Brazil

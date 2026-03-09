@@ -7,6 +7,7 @@ RUN corepack enable && corepack prepare yarn@1.22.22 --activate
 COPY package.json yarn.lock lerna.json ./
 COPY tsconfig.json tsconfig.paths.json tsconfig.server.json playwright.config.ts vitest.config.mts ./
 COPY .editorconfig .eslintignore .eslintrc .prettierignore .prettierrc ./
+COPY .env.example .env.test.example .env.e2e.example ./
 COPY packages ./packages
 COPY storage/plugins ./storage/plugins
 

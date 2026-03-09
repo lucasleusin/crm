@@ -18,9 +18,9 @@ const PAGE_DEFS = [
     title: 'Organizations',
     icon: 'bankoutlined',
     collection: 'crm_organizations',
-    columns: ['organization_name', 'contacts_summary', 'website', 'market', 'source'],
-    createFields: ['organization_name', 'country', 'org_types', 'sports', 'website', 'market', 'source', 'head_office', 'instagram', 'comments'],
-    editFields: ['organization_name', 'country', 'org_types', 'sports', 'website', 'market', 'source', 'head_office', 'instagram', 'comments'],
+    columns: ['organization_name', 'org_type', 'contacts_summary', 'website', 'market', 'source'],
+    createFields: ['organization_name', 'country', 'org_type', 'sports', 'website', 'market', 'source', 'head_office', 'instagram', 'comments'],
+    editFields: ['organization_name', 'country', 'org_type', 'sports', 'website', 'market', 'source', 'head_office', 'instagram', 'comments'],
   },
   {
     title: 'Jobs',
@@ -105,32 +105,6 @@ function buildBelongsToField(spec) {
   };
 }
 
-function buildBelongsToManyField(spec) {
-  return {
-    name: spec.fieldName,
-    type: 'belongsToMany',
-    interface: 'm2m',
-    target: spec.targetCollection,
-    through: spec.throughCollection,
-    foreignKey: spec.foreignKey,
-    otherKey: spec.otherKey,
-    sourceKey: 'id',
-    targetKey: 'id',
-    uiSchema: {
-      type: 'array',
-      title: spec.fieldTitle,
-      'x-component': 'AssociationField',
-      'x-component-props': {
-        multiple: true,
-        fieldNames: {
-          label: spec.targetDisplayField,
-          value: 'id',
-        },
-      },
-    },
-  };
-}
-
 const FOREIGN_KEY_SPECS = [
   {
     table: 'crm_contacts',
@@ -165,6 +139,13 @@ const FOREIGN_KEY_SPECS = [
     column: 'organization_id',
     constraintName: 'fk_crm_connections_organization_id',
     referencedTable: 'crm_organizations',
+    onDelete: 'SET NULL',
+  },
+  {
+    table: 'crm_organizations',
+    column: 'org_type_id',
+    constraintName: 'fk_crm_organizations_org_type_id',
+    referencedTable: 'crm_org_types',
     onDelete: 'SET NULL',
   },
   {
@@ -217,6 +198,16 @@ async function upsertField(app, collectionRecord, fieldDef) {
   } else {
     await repo.create({ values });
   }
+}
+
+async function deleteField(app, collectionRecord, fieldName) {
+  await app.db.getRepository('dataSourcesFields').destroy({
+    filter: {
+      name: fieldName,
+      collectionName: collectionRecord.get('name'),
+      dataSourceKey: DATA_SOURCE_KEY,
+    },
+  });
 }
 
 async function getCollectionRecord(app, name) {
@@ -441,16 +432,15 @@ async function ensureDataModel(app) {
   await upsertField(
     app,
     organizations,
-    buildBelongsToManyField({
-      fieldName: 'org_types',
-      fieldTitle: 'Organization types',
+    buildBelongsToField({
+      fieldName: 'org_type',
+      fieldTitle: 'Organization type',
       targetCollection: 'crm_org_types',
       targetDisplayField: 'org_type_name',
-      throughCollection: 'crm_organizations_org_types',
-      foreignKey: 'organization_id',
-      otherKey: 'org_type_id',
+      foreignKey: 'org_type_id',
     }),
   );
+  await deleteField(app, organizations, 'org_types');
   await upsertField(
     app,
     contacts,
@@ -510,6 +500,27 @@ async function ensureDataModel(app) {
   await app.db.sync();
 
   const queries = [
+    `
+      ALTER TABLE crm_organizations
+      ADD COLUMN IF NOT EXISTS org_type_id BIGINT NULL
+    `,
+    `
+      UPDATE crm_organizations o
+      LEFT JOIN (
+        SELECT organization_id, MIN(org_type_id) AS org_type_id
+        FROM crm_organizations_org_types
+        GROUP BY organization_id
+      ) rel ON rel.organization_id = o.id
+      SET o.org_type_id = rel.org_type_id
+      WHERE o.org_type_id IS NULL
+    `,
+    'DELETE FROM crm_organizations_org_types',
+    `
+      INSERT INTO crm_organizations_org_types (organization_id, org_type_id, createdAt, updatedAt)
+      SELECT id, org_type_id, NOW(), NOW()
+      FROM crm_organizations
+      WHERE org_type_id IS NOT NULL
+    `,
     `
       UPDATE crm_contacts c
       LEFT JOIN (

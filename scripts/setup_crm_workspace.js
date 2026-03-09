@@ -105,36 +105,81 @@ function buildBelongsToField(spec) {
   };
 }
 
+function buildBelongsToManyField(spec) {
+  return {
+    name: spec.fieldName,
+    type: 'belongsToMany',
+    interface: 'm2m',
+    target: spec.targetCollection,
+    through: spec.throughCollection,
+    foreignKey: spec.foreignKey,
+    otherKey: spec.otherKey,
+    sourceKey: 'id',
+    targetKey: 'id',
+    uiSchema: {
+      type: 'array',
+      title: spec.fieldTitle,
+      'x-component': 'AssociationField',
+      'x-component-props': {
+        multiple: true,
+        fieldNames: {
+          label: spec.targetDisplayField,
+          value: 'id',
+        },
+      },
+    },
+  };
+}
+
 const FOREIGN_KEY_SPECS = [
   {
     table: 'crm_contacts',
     column: 'organization_id',
     constraintName: 'fk_crm_contacts_organization_id',
     referencedTable: 'crm_organizations',
+    onDelete: 'SET NULL',
   },
   {
     table: 'crm_jobs',
     column: 'contact_id',
     constraintName: 'fk_crm_jobs_contact_id',
     referencedTable: 'crm_contacts',
+    onDelete: 'SET NULL',
   },
   {
     table: 'crm_jobs',
     column: 'organization_id',
     constraintName: 'fk_crm_jobs_organization_id',
     referencedTable: 'crm_organizations',
+    onDelete: 'SET NULL',
   },
   {
     table: 'crm_connections',
     column: 'contact_id',
     constraintName: 'fk_crm_connections_contact_id',
     referencedTable: 'crm_contacts',
+    onDelete: 'SET NULL',
   },
   {
     table: 'crm_connections',
     column: 'organization_id',
     constraintName: 'fk_crm_connections_organization_id',
     referencedTable: 'crm_organizations',
+    onDelete: 'SET NULL',
+  },
+  {
+    table: 'crm_organizations_org_types',
+    column: 'organization_id',
+    constraintName: 'fk_crm_organizations_org_types_organization_id',
+    referencedTable: 'crm_organizations',
+    onDelete: 'CASCADE',
+  },
+  {
+    table: 'crm_organizations_org_types',
+    column: 'org_type_id',
+    constraintName: 'fk_crm_organizations_org_types_org_type_id',
+    referencedTable: 'crm_org_types',
+    onDelete: 'CASCADE',
   },
 ];
 
@@ -395,6 +440,19 @@ async function ensureDataModel(app) {
   await upsertField(app, organizations, buildScalarField('contacts_summary', 'text'));
   await upsertField(
     app,
+    organizations,
+    buildBelongsToManyField({
+      fieldName: 'org_types',
+      fieldTitle: 'Organization types',
+      targetCollection: 'crm_org_types',
+      targetDisplayField: 'org_type_name',
+      throughCollection: 'crm_organizations_org_types',
+      foreignKey: 'organization_id',
+      otherKey: 'org_type_id',
+    }),
+  );
+  await upsertField(
+    app,
     contacts,
     buildBelongsToField({
       fieldName: 'organization',
@@ -585,7 +643,7 @@ async function ensureDataModel(app) {
       FOREIGN KEY (${spec.column})
       REFERENCES ${spec.referencedTable}(id)
       ON UPDATE CASCADE
-      ON DELETE SET NULL
+      ON DELETE ${spec.onDelete || 'SET NULL'}
     `);
   }
 }

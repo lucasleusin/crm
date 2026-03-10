@@ -2,6 +2,29 @@ const { initEnv, generateAppDir } = require('@nocobase/cli/src/util');
 const { Application, runPluginStaticImports } = require('@nocobase/server');
 const { getConfig } = require('@nocobase/app/lib/config');
 
+const IMPORTED_COLLECTION_NAMES = [
+  'activations',
+  'assets',
+  'competitions',
+  'connections',
+  'connections_nationalities',
+  'contacts',
+  'contacts_nationalities',
+  'contacts_organizations',
+  'content_calendar',
+  'content_published',
+  'content_published_content_calendars',
+  'countries',
+  'events',
+  'jobs',
+  'organizations',
+  'organizations_competitions',
+  'organizations_org_types',
+  'organizations_sports',
+  'org_types',
+  'sports',
+];
+
 async function bootstrapApp() {
   initEnv();
   generateAppDir();
@@ -63,35 +86,44 @@ async function deleteImportedMetadata(app) {
   const collectionsModelTable = app.db.getRepository('collections').model.getTableName();
   const fieldsTable = app.db.getRepository('dataSourcesFields').model.getTableName();
   const collectionsTable = app.db.getRepository('dataSourcesCollections').model.getTableName();
+  const importedList = IMPORTED_COLLECTION_NAMES.map((name) => `'${name}'`).join(', ');
 
   await sequelize.query(`
     DELETE FROM ${fieldsModelTable}
     WHERE collectionName LIKE 'crm\\_%'
+       OR collectionName IN (${importedList})
   `);
 
   await sequelize.query(`
     DELETE FROM ${collectionsModelTable}
     WHERE name LIKE 'crm\\_%'
+       OR name IN (${importedList})
   `);
 
   await sequelize.query(`
     DELETE FROM ${fieldsTable}
     WHERE collectionName LIKE 'crm\\_%'
+       OR collectionName IN (${importedList})
   `);
 
   await sequelize.query(`
     DELETE FROM ${collectionsTable}
     WHERE name LIKE 'crm\\_%'
+       OR name IN (${importedList})
   `);
 }
 
 async function dropImportedTables(app) {
   const sequelize = app.db.sequelize;
+  const importedList = IMPORTED_COLLECTION_NAMES.map((name) => `'${name}'`).join(', ');
   const [rows] = await sequelize.query(`
     SELECT TABLE_NAME
     FROM information_schema.TABLES
     WHERE TABLE_SCHEMA = DATABASE()
-      AND TABLE_NAME LIKE 'crm\\_%'
+      AND (
+        TABLE_NAME LIKE 'crm\\_%'
+        OR TABLE_NAME IN (${importedList})
+      )
     ORDER BY TABLE_NAME
   `);
 

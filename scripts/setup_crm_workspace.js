@@ -105,6 +105,30 @@ function buildBelongsToField(spec) {
   };
 }
 
+function buildHasManyField(spec) {
+  return {
+    name: spec.fieldName,
+    type: 'hasMany',
+    interface: 'o2m',
+    target: spec.targetCollection,
+    foreignKey: spec.foreignKey,
+    sourceKey: 'id',
+    targetKey: 'id',
+    uiSchema: {
+      type: 'array',
+      title: spec.fieldTitle,
+      'x-component': 'AssociationField',
+      'x-component-props': {
+        multiple: true,
+        fieldNames: {
+          label: spec.targetDisplayField,
+          value: 'id',
+        },
+      },
+    },
+  };
+}
+
 const FOREIGN_KEY_SPECS = [
   {
     table: 'crm_contacts',
@@ -424,6 +448,7 @@ function buildPageSchema(collectionName, columns, createFields, editFields, fiel
 
 async function ensureDataModel(app) {
   const organizations = await getCollectionRecord(app, 'crm_organizations');
+  const orgTypes = await getCollectionRecord(app, 'crm_org_types');
   const contacts = await getCollectionRecord(app, 'crm_contacts');
   const jobs = await getCollectionRecord(app, 'crm_jobs');
   const connections = await getCollectionRecord(app, 'crm_connections');
@@ -440,7 +465,19 @@ async function ensureDataModel(app) {
       foreignKey: 'org_type_id',
     }),
   );
+  await deleteField(app, organizations, 'org_type_id');
   await deleteField(app, organizations, 'org_types');
+  await upsertField(
+    app,
+    orgTypes,
+    buildHasManyField({
+      fieldName: 'organizations',
+      fieldTitle: 'Organizations',
+      targetCollection: 'crm_organizations',
+      targetDisplayField: 'organization_name',
+      foreignKey: 'org_type_id',
+    }),
+  );
   await upsertField(
     app,
     contacts,

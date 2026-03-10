@@ -59,8 +59,20 @@ async function deleteImportedRoutes(app) {
 
 async function deleteImportedMetadata(app) {
   const sequelize = app.db.sequelize;
+  const fieldsModelTable = app.db.getRepository('fields').model.getTableName();
+  const collectionsModelTable = app.db.getRepository('collections').model.getTableName();
   const fieldsTable = app.db.getRepository('dataSourcesFields').model.getTableName();
   const collectionsTable = app.db.getRepository('dataSourcesCollections').model.getTableName();
+
+  await sequelize.query(`
+    DELETE FROM ${fieldsModelTable}
+    WHERE collectionName LIKE 'crm\\_%'
+  `);
+
+  await sequelize.query(`
+    DELETE FROM ${collectionsModelTable}
+    WHERE name LIKE 'crm\\_%'
+  `);
 
   await sequelize.query(`
     DELETE FROM ${fieldsTable}

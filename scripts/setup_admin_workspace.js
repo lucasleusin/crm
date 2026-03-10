@@ -508,10 +508,11 @@ function addCountriesFilterForm(pageSchema, collectionName) {
 
 async function ensureCollectionTitles(app) {
   const repo = app.db.getRepository('dataSourcesCollections');
+  const availablePageDefs = [];
   for (const pageDef of PAGE_DEFS) {
     const record = await getCollectionRecord(app, pageDef.collection);
     if (!record) {
-      throw new Error(`Missing collection ${pageDef.collection}`);
+      continue;
     }
     await repo.update({
       filter: {
@@ -522,7 +523,9 @@ async function ensureCollectionTitles(app) {
         title: pageDef.collectionDisplayName,
       },
     });
+    availablePageDefs.push(pageDef);
   }
+  return availablePageDefs;
 }
 
 async function removeRouteSubtree(app, rootRoute) {
@@ -629,10 +632,10 @@ async function createRoutes(app, pageSchemas) {
 async function main() {
   const app = await bootstrapApp();
   try {
-    await ensureCollectionTitles(app);
+    const availablePageDefs = await ensureCollectionTitles(app);
 
     const pageSchemas = [];
-    for (const pageDef of PAGE_DEFS) {
+    for (const pageDef of availablePageDefs) {
       const fieldMap = await getFieldMap(app, pageDef.collection);
       pageSchemas.push({
         ...pageDef,
@@ -647,7 +650,9 @@ async function main() {
     }
 
     await resetAdminRoutes(app);
-    await createRoutes(app, pageSchemas);
+    if (pageSchemas.length > 0) {
+      await createRoutes(app, pageSchemas);
+    }
   } finally {
     await app.destroy();
   }

@@ -13,6 +13,30 @@ const COLLECTION_SPEC = {
   titleField: 'country_name',
   keyField: 'country_key',
 };
+const SELECT_FIELD_OPTIONS = {
+  continent: [
+    'Africa',
+    'Antarctica',
+    'Asia',
+    'Europe',
+    'North America',
+    'Oceania',
+    'South America',
+  ],
+  region: [
+    'Africa',
+    'Antarctica',
+    'Asia',
+    'Caribbean',
+    'Central America',
+    'Europe',
+    'Middle East',
+    'North America',
+    'Oceania',
+    'South America',
+    'Unknown',
+  ],
+};
 
 function slugify(value) {
   return String(value || '')
@@ -40,15 +64,31 @@ function humanize(name) {
 }
 
 function buildScalarField(columnName) {
+  const selectOptions = SELECT_FIELD_OPTIONS[columnName];
+  const optionItems = selectOptions
+    ? selectOptions.map((value) => ({
+        label: value,
+        value,
+      }))
+    : null;
+
   return {
     name: columnName,
     type: 'string',
-    interface: 'input',
+    interface: selectOptions ? 'select' : 'input',
     unique: columnName === COLLECTION_SPEC.keyField,
     uiSchema: {
       type: 'string',
       title: humanize(columnName),
-      'x-component': 'Input',
+      'x-component': selectOptions ? 'Select' : 'Input',
+      ...(selectOptions
+        ? {
+            enum: optionItems,
+            'x-component-props': {
+              options: optionItems,
+            },
+          }
+        : {}),
     },
   };
 }
@@ -185,6 +225,14 @@ async function upsertLegacyField(app, fieldDef, sort) {
     options: {
       unique: fieldDef.unique || false,
       uiSchema: fieldDef.uiSchema,
+      ...(SELECT_FIELD_OPTIONS[fieldDef.name]
+        ? {
+            enum: SELECT_FIELD_OPTIONS[fieldDef.name].map((value) => ({
+              label: value,
+              value,
+            })),
+          }
+        : {}),
     },
     sort,
   };
